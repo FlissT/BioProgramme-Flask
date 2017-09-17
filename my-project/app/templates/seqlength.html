@@ -1,0 +1,33 @@
+<!-- seqlength.html-->
+
+{% extends "base.html" %}
+{% block title %}Sequence Length{% endblock %}
+{% block body %}
+<div class="jumbotron">
+  <h2>Sequence length</h2>
+</div>
+
+<div class="jumbotron">
+ <html>
+<script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML =
+                    document.getElementById("user_input").value.length;
+    }
+  </script>
+
+   {% block content %}
+   <form>
+     <label>Enter sequence</label>
+     <input type="text" name="message" id="user_input">
+   </form>
+
+   <input type="submit" onclick="showInput();">
+   <p><label>The length of this sequence is ... </label><span id='display'></span></p>  
+   {% endblock content %}
+
+  </html>
+</div>
+{% endblock %}
+ 
+
