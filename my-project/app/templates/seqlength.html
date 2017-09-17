@@ -3,31 +3,35 @@
 {% extends "base.html" %}
 {% block title %}Sequence Length{% endblock %}
 {% block body %}
-<div class="jumbotron">
+<div class="jumbotron" style="background-color:lightblue;">
   <h2>Sequence length</h2>
 </div>
 
-<div class="jumbotron">
- <html>
-<script language="JavaScript">
-    function showInput() {
-        document.getElementById('display').innerHTML =
+<div class="jumbotron" style="background-color:lightblue;">
+  <html>
+    <script language="JavaScript">
+      function showInput() {
+          document.getElementById('display').innerHTML =
                     document.getElementById("user_input").value.length;
-    }
-  </script>
+      }
+    </script>
 
    {% block content %}
    <form>
      <label>Enter sequence</label>
      <input type="text" name="message" id="user_input">
    </form>
+   <input type="submit" class="btn btn-info" value="Submit" onclick="showInput();">
+</div>
 
-   <input type="submit" onclick="showInput();">
+<div class="jumbotron" style="background-color:lightblue;">
    <p><label>The length of this sequence is ... </label><span id='display'></span></p>  
+</div>
    {% endblock content %}
 
   </html>
-</div>
+
+
 {% endblock %}
  
 
